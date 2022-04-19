@@ -1,0 +1,470 @@
+
+ <!-- Modal 1 -->
+ <ng-template #contenido let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Prediccion de una película</h4>
+        <button class="btn btn-outline-danger bi-x-lg"
+        type="button" 
+        (click)="modal.dismiss()">
+        Cerrar
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="container d-flex justify-content-center align-items-center"
+    >
+    <form 
+            action="php/check-login.php" 
+            method="post" 
+            style="width: 450px;">
+            
+        <div class="mb-3">
+        <label for="title" 
+                class="form-label">Título</label>
+        <input type="text" 
+                class="form-control" 
+                name="title" 
+                id="title">
+        </div>
+        <div class="mb-3">
+        <label for="genero" 
+                class="form-label">Género</label>
+        <input type="text" 
+                name="genero" 
+                class="form-control" 
+                id="genero">
+        </div>
+        <div class="mb-3">
+        <label for="rating" 
+                class="form-label">Calificación</label>
+        <input type="text" 
+                name="rating" 
+                class="form-control" 
+                id="rating">
+        </div>
+        
+    </form>
+</div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-success" (click)="modal.close()"> Predecir </button>
+    </div>
+</ng-template>
+
+<!-- End modal 1-->
+
+
+ <!-- Modal 2 -->
+ <ng-template #contenido2 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Prediccion del Bitcoin</h4>
+        <button class="btn btn-outline-danger bi-x-lg"
+        type="button" 
+        (click)="modal.dismiss()">
+        Cerrar
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="container d-flex justify-content-center align-items-center"
+    >
+    <form 
+            action="php/check-login.php" 
+            method="post" 
+            style="width: 450px;">
+            
+        <div class="mb-3">
+        <label for="high" 
+                class="form-label">Alto</label>
+        <input type="text" 
+                class="form-control" 
+                name="high" 
+                id="high">
+        </div>
+        <div class="mb-3">
+        <label for="low" 
+                class="form-label">Bajo</label>
+        <input type="text" 
+                name="low" 
+                class="form-control" 
+                id="low">
+        </div>
+    </form>
+</div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-success" (click)="modal.close()"> Predecir </button>
+    </div>
+</ng-template>
+
+<!-- End modal 2-->
+
+ <!-- Modal 3 -->
+ <ng-template #contenido3 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Prediccion de Cirrosis</h4>
+        <button class="btn btn-outline-danger bi-x-lg"
+        type="button" 
+        (click)="modal.dismiss()">
+        Cerrar
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="container d-flex justify-content-center align-items-center"
+    >
+    <form 
+            action="php/check-login.php" 
+            method="post" 
+            style="width: 450px;">
+            
+        <div class="mb-3">
+        <label for="ndays" 
+                class="form-label">Número de días</label>
+        <input type="text" 
+                class="form-control" 
+                name="ndays" 
+                id="ndays">
+        </div>
+        <div class="mb-3">
+            <label for="status" 
+                    class="form-label">Estado</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="status" 
+                    id="status">
+        </div>
+        <div class="mb-3">
+            <label for="drug" 
+                    class="form-label">Droga</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="drug" 
+                    id="drug">
+        </div>
+        <div class="mb-3">
+            <label for="age" 
+                    class="form-label">Años</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="age" 
+                    id="age">
+        </div>
+        <div class="mb-3">
+            <label for="generoCir" 
+                    class="form-label">Género</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="generoCir" 
+                    id="generoCir">
+        </div>
+        <div class="mb-3">
+            <label for="accites" 
+                    class="form-label">Accites</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="accites" 
+                    id="accites">
+        </div>
+        <div class="mb-3">
+            <label for="pathonegaly" 
+                    class="form-label">Pathonegaly</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="pathonegaly" 
+                    id="pathonegaly">
+        </div>
+        <div class="mb-3">
+            <label for="spiders" 
+                    class="form-label">Spiders</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="spiders" 
+                    id="spiders">
+        </div>
+        <div class="mb-3">
+        <label for="edema" 
+                class="form-label">Edema</label>
+        <input type="text" 
+                name="edema" 
+                class="form-control" 
+                id="edema">
+        </div>
+        <div class="mb-3">
+            <label for="bilirrubine" 
+                    class="form-label">Bilirrubina</label>
+            <input type="text" 
+                    name="bilirrubine" 
+                    class="form-control" 
+                    id="bilirrubine">
+            </div>
+    </form>
+</div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-success" (click)="modal.close()"> Predecir </button>
+    </div>
+</ng-template>
+
+<!-- End modal 3-->
+
+ <!-- Modal 4 -->
+ <ng-template #contenido4 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Prediccion de Hepatitis</h4>
+        <button class="btn btn-outline-danger bi-x-lg"
+        type="button" 
+        (click)="modal.dismiss()">
+        Cerrar
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="container d-flex justify-content-center align-items-center"
+    >
+    <form 
+            action="php/check-login.php" 
+            method="post" 
+            style="width: 450px;">
+            
+        <div class="mb-3">
+        <label for="alb" 
+                class="form-label">ALB</label>
+        <input type="text" 
+                class="form-control" 
+                name="alb" 
+                id="alb">
+        </div>
+        <div class="mb-3">
+        <label for="alp" 
+                class="form-label">ALP</label>
+        <input type="text" 
+                name="alp" 
+                class="form-control" 
+                id="alp">
+        </div>
+        <div class="mb-3">
+            <label for="ast" 
+                    class="form-label">AST</label>
+            <input type="text" 
+                    name="ast" 
+                    class="form-control" 
+                    id="ast">
+        </div>
+        <div class="mb-3">
+            <label for="bil" 
+                    class="form-label">BIL</label>
+            <input type="text" 
+                    name="bil" 
+                    class="form-control" 
+                    id="bil">
+        </div>
+
+        <div class="mb-3">
+            <label label for="che" 
+                class="form-label">CHE</label>
+            <input type="text" 
+                name="che" 
+                class="form-control" 
+                id="che">
+        </div>
+    </form>
+</div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-success" (click)="modal.close()"> Predecir </button>
+    </div>
+</ng-template>
+
+<!-- End modal 4-->
+
+
+ <!-- Modal 5 -->
+ <ng-template #contenido5 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Prediccion del IMC</h4>
+        <button class="btn btn-outline-danger bi-x-lg"
+        type="button" 
+        (click)="modal.dismiss()">
+        Cerrar
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="container d-flex justify-content-center align-items-center"
+    >
+    <form 
+            action="php/check-login.php" 
+            method="post" 
+            style="width: 450px;">
+            
+        <div class="mb-3">
+        <label for="weight" 
+                class="form-label">Peso</label>
+        <input type="text" 
+                class="form-control" 
+                name="weight" 
+                id="weight">
+        </div>
+        <div class="mb-3">
+        <label for="nec" 
+                class="form-label">NEC</label>
+        <input type="text" 
+                name="nec" 
+                class="form-control" 
+                id="nec">
+        </div>
+    </form>
+</div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-success" (click)="modal.close()"> Predecir </button>
+    </div>
+</ng-template>
+
+<!-- End modal 5-->
+
+ <!-- Modal 6 -->
+ <ng-template #contenido6 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Prediccion Stroke</h4>
+        <button class="btn btn-outline-danger bi-x-lg"
+        type="button" 
+        (click)="modal.dismiss()">
+        Cerrar
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="container d-flex justify-content-center align-items-center"
+    >
+    <form 
+            action="php/check-login.php" 
+            method="post" 
+            style="width: 450px;">
+            
+        <div class="mb-3">
+        <label for="genderStroke" 
+                class="form-label">Género</label>
+        <input type="text" 
+                class="form-control" 
+                name="genderStroke" 
+                id="genderStroke">
+        </div>
+        <div class="mb-3">
+            <label for="ageStroke" 
+                    class="form-label">Edad</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="ageStroke" 
+                    id="ageStroke">
+        </div>
+        <div class="mb-3">
+            <label for="hypertension" 
+                    class="form-label">Hipertensión</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="hypertension" 
+                    id="hypertension">
+        </div>
+        <div class="mb-3">
+            <label for="desease" 
+                    class="form-label">Enfermedad cardiaca</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="desease" 
+                    id="desease">
+        </div>
+        <div class="mb-3">
+            <label for="married" 
+                    class="form-label">Casado(a)</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="married" 
+                    id="married">
+        </div>
+        <div class="mb-3">
+            <label for="jobType" 
+                    class="form-label">Tipo de trabajo</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="jobType" 
+                    id="jobType">
+        </div>
+        <div class="mb-3">
+            <label for="residence" 
+                    class="form-label">Tipo de residencia</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="residence" 
+                    id="residence">
+        </div>
+        <div class="mb-3">
+            <label for="glucLvl" 
+                    class="form-label">Nivel de glucosa</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="glucLvl" 
+                    id="glucLvl">
+        </div>
+        <div class="mb-3">
+        <label for="bmi" 
+                class="form-label">BMI</label>
+        <input type="text" 
+                name="bmi" 
+                class="form-control" 
+                id="bmi">
+        </div>
+        <div class="mb-3">
+            <label for="smokingStatus" 
+                    class="form-label">Estado de fumador</label>
+            <input type="text" 
+                    name="smokingStatus" 
+                    class="form-control" 
+                    id="smokingStatus">
+            </div>
+    </form>
+</div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-success" (click)="modal.close()"> Predecir </button>
+    </div>
+</ng-template>
+
+<!-- End modal 5-->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand clr" href="#"> <h3>Predicter</h3></a>
+          </div>
+        </nav>
+<div class="box">
+
+    <div class="boxL"> 
+        <div>            
+        </div>
+        <div>Modelos</div>
+        <button class="btn btn-outline-secondary bi bi-person-plus-fill" (click)="openSM(contenido)" >
+            Predecir película
+        </button>
+        
+        <button class="btn btn-outline-secondary bi bi-person-plus-fill"(click)="openSM2(contenido2)" >
+            Predecir Bitcoin
+        </button>
+
+        <button class="btn btn-outline-secondary bi bi-person-plus-fill"(click)="openSM3(contenido3)" >
+            Predecir Cirrosis
+        </button>
+
+        <button class="btn btn-outline-secondary bi bi-person-plus-fill" (click)="openSM4(contenido4)">
+            Predecir Hepatitis
+        </button>
+    
+        <button class="btn btn-outline-secondary bi bi-person-plus-fill"(click)="openSM5(contenido5)" >
+            Predecir IMC
+        </button>
+        
+        <button class="btn btn-outline-secondary bi bi-person-plus-fill" (click)="openSM6(contenido6)">
+            Predecir Stroke
+        </button>
+        
+    </div>
+
+        <img style="margin-left: 350px ;" src="https://cdn.dribbble.com/users/214929/screenshots/4967879/ai-loader-opt.gif" alt="gif de algo" class='eye'/>
+
+</div>
