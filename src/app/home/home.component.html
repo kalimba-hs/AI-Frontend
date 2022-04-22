@@ -10,44 +10,49 @@
         </button>
     </div>
     <div class="modal-body">
-        <div class="container d-flex justify-content-center align-items-center"
-    >
-    <form 
-            action="php/check-login.php" 
-            method="post" 
+    <div class="container d-flex justify-content-center align-items-center">
+
+
+
+    <form   #formMovie="ngForm"  
+            (ngSubmit)="onSubmitMovie(formMovie.value)"
             style="width: 450px;">
             
         <div class="mb-3">
-        <label for="title" 
+        <label 
                 class="form-label">Título</label>
-        <input type="text" 
+        <input type="number" 
                 class="form-control" 
-                name="title" 
-                id="title">
+                name="input1"
+                ngModel>
         </div>
         <div class="mb-3">
-        <label for="genero" 
+        <label 
                 class="form-label">Género</label>
-        <input type="text" 
-                name="genero" 
+        <input type="number" 
+                name="input2" 
                 class="form-control" 
-                id="genero">
+                ngModel>
         </div>
         <div class="mb-3">
-        <label for="rating" 
+        <label  
                 class="form-label">Calificación</label>
-        <input type="text" 
-                name="rating" 
-                class="form-control" 
-                id="rating">
+        <input type="number" 
+                name="input3" 
+                class="form-control"
+                ngModel>
+        </div>
+        <div *ngIf="alert" class="alert alert-primary" role="alert">
+                La predicción es: {{res.res}}
+        </div>
+        <div class="modal-footer">
+                <button type="submit"  class="btn btn-outline-success"> Predecir </button>
         </div>
         
     </form>
 </div>
     </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-success" (click)="modal.close()"> Predecir </button>
-    </div>
+   
 </ng-template>
 
 <!-- End modal 1-->
@@ -110,97 +115,100 @@
     <div class="modal-body">
         <div class="container d-flex justify-content-center align-items-center"
     >
-    <form 
-            action="php/check-login.php" 
-            method="post" 
+    <form   #formCir="ngForm"  
+            (ngSubmit)="onSubmitCir(formCir.value)"
             style="width: 450px;">
             
         <div class="mb-3">
-        <label for="ndays" 
+        <label 
                 class="form-label">Número de días</label>
-        <input type="text" 
+        <input type="number" 
                 class="form-control" 
-                name="ndays" 
-                id="ndays">
+                name="input1"
+                ngModel>
         </div>
         <div class="mb-3">
-            <label for="status" 
+            <label 
                     class="form-label">Estado</label>
             <input type="text" 
                     class="form-control" 
-                    name="status" 
-                    id="status">
+                    name="input2"
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="drug" 
+            <label 
                     class="form-label">Droga</label>
             <input type="text" 
                     class="form-control" 
-                    name="drug" 
-                    id="drug">
+                    name="input3"
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="age" 
+            <label  
                     class="form-label">Años</label>
-            <input type="text" 
+            <input type="number" 
                     class="form-control" 
-                    name="age" 
-                    id="age">
+                    name="input4"
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="generoCir" 
+            <label 
                     class="form-label">Género</label>
             <input type="text" 
                     class="form-control" 
-                    name="generoCir" 
-                    id="generoCir">
+                    name="input5"
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="accites" 
+            <label  
                     class="form-label">Accites</label>
             <input type="text" 
                     class="form-control" 
-                    name="accites" 
-                    id="accites">
+                    name="input6"
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="pathonegaly" 
+            <label  
                     class="form-label">Pathonegaly</label>
             <input type="text" 
                     class="form-control" 
-                    name="pathonegaly" 
-                    id="pathonegaly">
+                    name="input7"
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="spiders" 
+            <label
                     class="form-label">Spiders</label>
             <input type="text" 
                     class="form-control" 
-                    name="spiders" 
-                    id="spiders">
+                    name="input8"
+                    ngModel>
         </div>
         <div class="mb-3">
-        <label for="edema" 
+        <label 
                 class="form-label">Edema</label>
         <input type="text" 
-                name="edema" 
-                class="form-control" 
-                id="edema">
+                name="input9" 
+                class="form-control"
+                ngModel>
         </div>
         <div class="mb-3">
-            <label for="bilirrubine" 
+            <label  
                     class="form-label">Bilirrubina</label>
-            <input type="text" 
-                    name="bilirrubine" 
-                    class="form-control" 
-                    id="bilirrubine">
+            <input type="number" 
+                    name="input10" 
+                    class="form-control"
+                    ngModel>
+            </div>
+            <div *ngIf="alert" class="alert alert-primary" role="alert">
+                La predicción es: {{res.result}}
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-outline-success" > Predecir </button>
             </div>
     </form>
 </div>
     </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-success" (click)="modal.close()"> Predecir </button>
-    </div>
+
 </ng-template>
 
 <!-- End modal 3-->
@@ -219,56 +227,59 @@
         <div class="container d-flex justify-content-center align-items-center"
     >
     <form 
-            action="php/check-login.php" 
-            method="post" 
+            #formHep="ngForm"  
+            (ngSubmit)="onSubmitHep(formHep.value)" 
             style="width: 450px;">
             
         <div class="mb-3">
-        <label for="alb" 
+        <label
                 class="form-label">ALB</label>
         <input type="text" 
                 class="form-control" 
-                name="alb" 
-                id="alb">
+                name="input1" 
+                ngModel>
         </div>
         <div class="mb-3">
-        <label for="alp" 
+        <label 
                 class="form-label">ALP</label>
         <input type="text" 
-                name="alp" 
+                name="input2" 
                 class="form-control" 
-                id="alp">
+                ngModel>
         </div>
         <div class="mb-3">
-            <label for="ast" 
+            <label  
                     class="form-label">AST</label>
             <input type="text" 
-                    name="ast" 
+                    name="input3" 
                     class="form-control" 
-                    id="ast">
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="bil" 
+            <label 
                     class="form-label">BIL</label>
             <input type="text" 
-                    name="bil" 
+                    name="input4" 
                     class="form-control" 
-                    id="bil">
+                    ngModel>
         </div>
 
         <div class="mb-3">
-            <label label for="che" 
+            <label 
                 class="form-label">CHE</label>
             <input type="text" 
-                name="che" 
+                name="input5" 
                 class="form-control" 
-                id="che">
+                ngModel>
+        </div>
+        <div *ngIf="alert" class="alert alert-primary" role="alert">
+                La predicción es: {{res.result}}
+        </div>
+        <div class="modal-footer">
+                <button type="submit" class="btn btn-outline-success" > Predecir </button>
         </div>
     </form>
 </div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-success" (click)="modal.close()"> Predecir </button>
     </div>
 </ng-template>
 
@@ -333,104 +344,108 @@
         <div class="container d-flex justify-content-center align-items-center"
     >
     <form 
-            action="php/check-login.php" 
-            method="post" 
+           #formStroke="ngForm"  
+           (ngSubmit)="onSubmitStroke(formStroke.value)" 
             style="width: 450px;">
             
         <div class="mb-3">
-        <label for="genderStroke" 
+        <label 
                 class="form-label">Género</label>
         <input type="text" 
                 class="form-control" 
-                name="genderStroke" 
-                id="genderStroke">
+                name="input1" 
+                ngModel>
         </div>
         <div class="mb-3">
-            <label for="ageStroke" 
+            <label 
                     class="form-label">Edad</label>
             <input type="text" 
                     class="form-control" 
-                    name="ageStroke" 
-                    id="ageStroke">
+                    name="input2" 
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="hypertension" 
+            <label 
                     class="form-label">Hipertensión</label>
             <input type="text" 
                     class="form-control" 
-                    name="hypertension" 
-                    id="hypertension">
+                    name="input3" 
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="desease" 
+            <label  
                     class="form-label">Enfermedad cardiaca</label>
             <input type="text" 
                     class="form-control" 
-                    name="desease" 
-                    id="desease">
+                    name="input4" 
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="married" 
+            <label  
                     class="form-label">Casado(a)</label>
             <input type="text" 
                     class="form-control" 
-                    name="married" 
-                    id="married">
+                    name="input5" 
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="jobType" 
+            <label  
                     class="form-label">Tipo de trabajo</label>
             <input type="text" 
                     class="form-control" 
-                    name="jobType" 
-                    id="jobType">
+                    name="input6" 
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="residence" 
+            <label  
                     class="form-label">Tipo de residencia</label>
             <input type="text" 
                     class="form-control" 
-                    name="residence" 
-                    id="residence">
+                    name="input7" 
+                    ngModel>
         </div>
         <div class="mb-3">
-            <label for="glucLvl" 
+            <label  
                     class="form-label">Nivel de glucosa</label>
             <input type="text" 
                     class="form-control" 
-                    name="glucLvl" 
-                    id="glucLvl">
+                    name="input8" 
+                    ngModel>
         </div>
         <div class="mb-3">
-        <label for="bmi" 
+        <label  
                 class="form-label">BMI</label>
         <input type="text" 
-                name="bmi" 
+                name="input9" 
                 class="form-control" 
-                id="bmi">
+                ngModel>
         </div>
         <div class="mb-3">
-            <label for="smokingStatus" 
+            <label  
                     class="form-label">Estado de fumador</label>
             <input type="text" 
-                    name="smokingStatus" 
+                    name="input10" 
                     class="form-control" 
-                    id="smokingStatus">
+                    ngModel>
             </div>
+            <div *ngIf="alert" class="alert alert-primary" role="alert">
+                La predicción es: {{res.result}}
+                </div>
+        <div class="modal-footer">
+                <button type="submit" class="btn btn-outline-success"> Predecir </button>
+        </div>
     </form>
 </div>
     </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-success" (click)="modal.close()"> Predecir </button>
-    </div>
-</ng-template>
 
-<!-- End modal 5-->
+</ng-template>
+        
+<!-- End modal 6-->
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container-fluid">
-            <a class="navbar-brand clr" href="#"> <h3>Predicter</h3></a>
+            <a class="navbar-brand clr" href="#"> <h3>PredicTEC</h3></a>
           </div>
         </nav>
 <div class="box">
